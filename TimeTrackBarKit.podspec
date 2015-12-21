@@ -105,11 +105,8 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resource_bundles = {
-	'TimeTrackBarKit' => [Media/*.png]
-}
   # s.resource  = "TimeTrackBarKit/*.{png}"
-  # s.resources = "Resources/*.png"
+  s.resources = "TimeTrackBarKit/Assets/*.png"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 

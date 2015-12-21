@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E41CBA31C27AA1500E9E48A /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E41CBA01C27AA1500E9E48A /* background.png */; };
+		1E41CBA41C27AA1500E9E48A /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E41CBA11C27AA1500E9E48A /* background@2x.png */; };
+		1E41CBA51C27AA1500E9E48A /* background@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E41CBA21C27AA1500E9E48A /* background@3x.png */; };
 		1EF7A22C1C279286006BE613 /* TimeTrackBarKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EF7A22B1C279286006BE613 /* TimeTrackBarKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1EF7A2341C2792A3006BE613 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EF7A2331C2792A3006BE613 /* Media.xcassets */; };
 		1EF7A2381C2792C7006BE613 /* ObjectInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7A2351C2792C7006BE613 /* ObjectInfo.swift */; };
 		1EF7A2391C2792C7006BE613 /* ObjectRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7A2361C2792C7006BE613 /* ObjectRect.swift */; };
 		1EF7A23A1C2792C7006BE613 /* ScaleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7A2371C2792C7006BE613 /* ScaleInfo.swift */; };
@@ -32,10 +34,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E41CBA01C27AA1500E9E48A /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		1E41CBA11C27AA1500E9E48A /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
+		1E41CBA21C27AA1500E9E48A /* background@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@3x.png"; sourceTree = "<group>"; };
 		1EF7A2281C279285006BE613 /* TimeTrackBarKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TimeTrackBarKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EF7A22B1C279286006BE613 /* TimeTrackBarKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeTrackBarKit.h; sourceTree = "<group>"; };
 		1EF7A22D1C279286006BE613 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1EF7A2331C2792A3006BE613 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		1EF7A2351C2792C7006BE613 /* ObjectInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectInfo.swift; sourceTree = "<group>"; };
 		1EF7A2361C2792C7006BE613 /* ObjectRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectRect.swift; sourceTree = "<group>"; };
 		1EF7A2371C2792C7006BE613 /* ScaleInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleInfo.swift; sourceTree = "<group>"; };
@@ -68,6 +72,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E41CB9F1C27AA1500E9E48A /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				1E41CBA01C27AA1500E9E48A /* background.png */,
+				1E41CBA11C27AA1500E9E48A /* background@2x.png */,
+				1E41CBA21C27AA1500E9E48A /* background@3x.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		1EF7A21E1C279285006BE613 = {
 			isa = PBXGroup;
 			children = (
@@ -94,8 +108,8 @@
 				1EF7A2361C2792C7006BE613 /* ObjectRect.swift */,
 				1EF7A2371C2792C7006BE613 /* ScaleInfo.swift */,
 				1EF7A23B1C2792DC006BE613 /* TimeTrackBar.swift */,
+				1E41CB9F1C27AA1500E9E48A /* Assets */,
 				1EF7A22D1C279286006BE613 /* Info.plist */,
-				1EF7A2331C2792A3006BE613 /* Media.xcassets */,
 			);
 			path = TimeTrackBarKit;
 			sourceTree = "<group>";
@@ -207,7 +221,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EF7A2341C2792A3006BE613 /* Media.xcassets in Resources */,
+				1E41CBA41C27AA1500E9E48A /* background@2x.png in Resources */,
+				1E41CBA51C27AA1500E9E48A /* background@3x.png in Resources */,
+				1E41CBA31C27AA1500E9E48A /* background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +457,7 @@
 				1EF7A2321C279286006BE613 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1EF7A2501C279316006BE613 /* Build configuration list for PBXNativeTarget "Example" */ = {
 			isa = XCConfigurationList;
@@ -449,6 +466,7 @@
 				1EF7A2521C279316006BE613 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
