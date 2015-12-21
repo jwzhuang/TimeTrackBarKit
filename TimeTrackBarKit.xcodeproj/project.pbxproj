@@ -1,0 +1,456 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1EF7A22C1C279286006BE613 /* TimeTrackBarKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EF7A22B1C279286006BE613 /* TimeTrackBarKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1EF7A2341C2792A3006BE613 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EF7A2331C2792A3006BE613 /* Media.xcassets */; };
+		1EF7A2381C2792C7006BE613 /* ObjectInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7A2351C2792C7006BE613 /* ObjectInfo.swift */; };
+		1EF7A2391C2792C7006BE613 /* ObjectRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7A2361C2792C7006BE613 /* ObjectRect.swift */; };
+		1EF7A23A1C2792C7006BE613 /* ScaleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7A2371C2792C7006BE613 /* ScaleInfo.swift */; };
+		1EF7A23C1C2792DC006BE613 /* TimeTrackBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7A23B1C2792DC006BE613 /* TimeTrackBar.swift */; };
+		1EF7A2441C279316006BE613 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7A2431C279316006BE613 /* AppDelegate.swift */; };
+		1EF7A2461C279316006BE613 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF7A2451C279316006BE613 /* ViewController.swift */; };
+		1EF7A2491C279316006BE613 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EF7A2471C279316006BE613 /* Main.storyboard */; };
+		1EF7A24B1C279316006BE613 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EF7A24A1C279316006BE613 /* Assets.xcassets */; };
+		1EF7A24E1C279316006BE613 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EF7A24C1C279316006BE613 /* LaunchScreen.storyboard */; };
+		1EF7A2531C2793E3006BE613 /* TimeTrackBarKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EF7A2281C279285006BE613 /* TimeTrackBarKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1EF7A2541C2793EA006BE613 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EF7A21F1C279285006BE613 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1EF7A2271C279285006BE613;
+			remoteInfo = TimeTrackBarKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1EF7A2281C279285006BE613 /* TimeTrackBarKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TimeTrackBarKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EF7A22B1C279286006BE613 /* TimeTrackBarKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeTrackBarKit.h; sourceTree = "<group>"; };
+		1EF7A22D1C279286006BE613 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EF7A2331C2792A3006BE613 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		1EF7A2351C2792C7006BE613 /* ObjectInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectInfo.swift; sourceTree = "<group>"; };
+		1EF7A2361C2792C7006BE613 /* ObjectRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectRect.swift; sourceTree = "<group>"; };
+		1EF7A2371C2792C7006BE613 /* ScaleInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleInfo.swift; sourceTree = "<group>"; };
+		1EF7A23B1C2792DC006BE613 /* TimeTrackBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTrackBar.swift; sourceTree = "<group>"; };
+		1EF7A2411C279316006BE613 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EF7A2431C279316006BE613 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1EF7A2451C279316006BE613 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1EF7A2481C279316006BE613 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1EF7A24A1C279316006BE613 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1EF7A24D1C279316006BE613 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1EF7A24F1C279316006BE613 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1EF7A2241C279285006BE613 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EF7A23E1C279316006BE613 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EF7A2531C2793E3006BE613 /* TimeTrackBarKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1EF7A21E1C279285006BE613 = {
+			isa = PBXGroup;
+			children = (
+				1EF7A22A1C279285006BE613 /* TimeTrackBarKit */,
+				1EF7A2421C279316006BE613 /* Example */,
+				1EF7A2291C279285006BE613 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1EF7A2291C279285006BE613 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1EF7A2281C279285006BE613 /* TimeTrackBarKit.framework */,
+				1EF7A2411C279316006BE613 /* Example.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1EF7A22A1C279285006BE613 /* TimeTrackBarKit */ = {
+			isa = PBXGroup;
+			children = (
+				1EF7A22B1C279286006BE613 /* TimeTrackBarKit.h */,
+				1EF7A2351C2792C7006BE613 /* ObjectInfo.swift */,
+				1EF7A2361C2792C7006BE613 /* ObjectRect.swift */,
+				1EF7A2371C2792C7006BE613 /* ScaleInfo.swift */,
+				1EF7A23B1C2792DC006BE613 /* TimeTrackBar.swift */,
+				1EF7A22D1C279286006BE613 /* Info.plist */,
+				1EF7A2331C2792A3006BE613 /* Media.xcassets */,
+			);
+			path = TimeTrackBarKit;
+			sourceTree = "<group>";
+		};
+		1EF7A2421C279316006BE613 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				1EF7A2431C279316006BE613 /* AppDelegate.swift */,
+				1EF7A2451C279316006BE613 /* ViewController.swift */,
+				1EF7A2471C279316006BE613 /* Main.storyboard */,
+				1EF7A24A1C279316006BE613 /* Assets.xcassets */,
+				1EF7A24C1C279316006BE613 /* LaunchScreen.storyboard */,
+				1EF7A24F1C279316006BE613 /* Info.plist */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1EF7A2251C279285006BE613 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EF7A22C1C279286006BE613 /* TimeTrackBarKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1EF7A2271C279285006BE613 /* TimeTrackBarKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EF7A2301C279286006BE613 /* Build configuration list for PBXNativeTarget "TimeTrackBarKit" */;
+			buildPhases = (
+				1EF7A2231C279285006BE613 /* Sources */,
+				1EF7A2241C279285006BE613 /* Frameworks */,
+				1EF7A2251C279285006BE613 /* Headers */,
+				1EF7A2261C279285006BE613 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TimeTrackBarKit;
+			productName = TimeTrackBarKit;
+			productReference = 1EF7A2281C279285006BE613 /* TimeTrackBarKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1EF7A2401C279316006BE613 /* Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EF7A2501C279316006BE613 /* Build configuration list for PBXNativeTarget "Example" */;
+			buildPhases = (
+				1EF7A23D1C279316006BE613 /* Sources */,
+				1EF7A23E1C279316006BE613 /* Frameworks */,
+				1EF7A23F1C279316006BE613 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1EF7A2551C2793EA006BE613 /* PBXTargetDependency */,
+			);
+			name = Example;
+			productName = Example;
+			productReference = 1EF7A2411C279316006BE613 /* Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1EF7A21F1C279285006BE613 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = JingWen;
+				TargetAttributes = {
+					1EF7A2271C279285006BE613 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 9396527TM5;
+					};
+					1EF7A2401C279316006BE613 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 9396527TM5;
+					};
+				};
+			};
+			buildConfigurationList = 1EF7A2221C279285006BE613 /* Build configuration list for PBXProject "TimeTrackBarKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1EF7A21E1C279285006BE613;
+			productRefGroup = 1EF7A2291C279285006BE613 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1EF7A2271C279285006BE613 /* TimeTrackBarKit */,
+				1EF7A2401C279316006BE613 /* Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1EF7A2261C279285006BE613 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EF7A2341C2792A3006BE613 /* Media.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EF7A23F1C279316006BE613 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EF7A24E1C279316006BE613 /* LaunchScreen.storyboard in Resources */,
+				1EF7A24B1C279316006BE613 /* Assets.xcassets in Resources */,
+				1EF7A2491C279316006BE613 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1EF7A2231C279285006BE613 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EF7A23A1C2792C7006BE613 /* ScaleInfo.swift in Sources */,
+				1EF7A2391C2792C7006BE613 /* ObjectRect.swift in Sources */,
+				1EF7A23C1C2792DC006BE613 /* TimeTrackBar.swift in Sources */,
+				1EF7A2381C2792C7006BE613 /* ObjectInfo.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EF7A23D1C279316006BE613 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EF7A2461C279316006BE613 /* ViewController.swift in Sources */,
+				1EF7A2441C279316006BE613 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1EF7A2551C2793EA006BE613 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1EF7A2271C279285006BE613 /* TimeTrackBarKit */;
+			targetProxy = 1EF7A2541C2793EA006BE613 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1EF7A2471C279316006BE613 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1EF7A2481C279316006BE613 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1EF7A24C1C279316006BE613 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1EF7A24D1C279316006BE613 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1EF7A22E1C279286006BE613 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1EF7A22F1C279286006BE613 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1EF7A2311C279286006BE613 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
+				INFOPLIST_FILE = TimeTrackBarKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.jwzuang.TimeTrackBarKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1EF7A2321C279286006BE613 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
+				INFOPLIST_FILE = TimeTrackBarKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.jwzuang.TimeTrackBarKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		1EF7A2511C279316006BE613 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.jwzuang.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1EF7A2521C279316006BE613 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tw.jwzuang.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1EF7A2221C279285006BE613 /* Build configuration list for PBXProject "TimeTrackBarKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EF7A22E1C279286006BE613 /* Debug */,
+				1EF7A22F1C279286006BE613 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1EF7A2301C279286006BE613 /* Build configuration list for PBXNativeTarget "TimeTrackBarKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EF7A2311C279286006BE613 /* Debug */,
+				1EF7A2321C279286006BE613 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1EF7A2501C279316006BE613 /* Build configuration list for PBXNativeTarget "Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EF7A2511C279316006BE613 /* Debug */,
+				1EF7A2521C279316006BE613 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1EF7A21F1C279285006BE613 /* Project object */;
+}

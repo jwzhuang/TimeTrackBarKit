@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gUj-ht-qxf">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="8oh-LR-Jym">
+            <objects>
+                <viewController id="gUj-ht-qxf" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vDr-bH-pX0"/>
+                        <viewControllerLayoutGuide type="bottom" id="BS8-UM-Yzs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="z7e-IJ-84z">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vTF-4J-WXk" customClass="TimeTrackBar" customModule="TimeTrackBarKit">
+                                <rect key="frame" x="0.0" y="210" width="320" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vTF-4J-WXk" secondAttribute="height" multiplier="16:3" id="kIP-lL-2P3"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BY0-lo-6DC">
+                                <rect key="frame" x="206" y="153" width="68" height="30"/>
+                                <state key="normal" title="Important"/>
+                                <connections>
+                                    <action selector="clickImportant:" destination="gUj-ht-qxf" eventType="touchUpInside" id="AKF-CX-Nak"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pick time track bar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6Z-rD-9AA">
+                                <rect key="frame" x="0.0" y="300.5" width="320" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="object type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5W0-Aq-btX">
+                                <rect key="frame" x="0.0" y="324" width="320" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrD-Ne-vYL">
+                                <rect key="frame" x="55" y="153" width="50" height="30"/>
+                                <state key="normal" title="Normal"/>
+                                <connections>
+                                    <action selector="clickNormal:" destination="gUj-ht-qxf" eventType="touchUpInside" id="Er7-OV-zNO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vTF-4J-WXk" secondAttribute="trailing" id="0o6-n7-5BW"/>
+                            <constraint firstItem="n6Z-rD-9AA" firstAttribute="centerY" secondItem="z7e-IJ-84z" secondAttribute="centerY" multiplier="1.3" id="1ZQ-Ca-69e"/>
+                            <constraint firstItem="wrD-Ne-vYL" firstAttribute="centerX" secondItem="z7e-IJ-84z" secondAttribute="centerX" multiplier="0.5" id="1ta-bj-yf9"/>
+                            <constraint firstItem="5W0-Aq-btX" firstAttribute="leading" secondItem="z7e-IJ-84z" secondAttribute="leading" id="FbP-wi-Z7V"/>
+                            <constraint firstItem="vTF-4J-WXk" firstAttribute="leading" secondItem="z7e-IJ-84z" secondAttribute="leading" id="HGQ-rD-VvB"/>
+                            <constraint firstItem="vTF-4J-WXk" firstAttribute="centerY" secondItem="z7e-IJ-84z" secondAttribute="centerY" id="HLx-x9-48x"/>
+                            <constraint firstItem="BY0-lo-6DC" firstAttribute="centerX" secondItem="z7e-IJ-84z" secondAttribute="centerX" multiplier="1.5" id="RVE-5F-jhn"/>
+                            <constraint firstAttribute="trailing" secondItem="n6Z-rD-9AA" secondAttribute="trailing" id="TZN-Y2-mr4"/>
+                            <constraint firstItem="n6Z-rD-9AA" firstAttribute="leading" secondItem="z7e-IJ-84z" secondAttribute="leading" id="a1S-9m-agS"/>
+                            <constraint firstItem="BY0-lo-6DC" firstAttribute="centerY" secondItem="z7e-IJ-84z" secondAttribute="centerY" multiplier="0.7" id="jdw-ni-d69"/>
+                            <constraint firstItem="wrD-Ne-vYL" firstAttribute="centerY" secondItem="z7e-IJ-84z" secondAttribute="centerY" multiplier="0.7" id="l0V-Rw-yTR"/>
+                            <constraint firstAttribute="trailing" secondItem="5W0-Aq-btX" secondAttribute="trailing" id="p8G-za-pck"/>
+                            <constraint firstItem="5W0-Aq-btX" firstAttribute="centerY" secondItem="z7e-IJ-84z" secondAttribute="centerY" multiplier="1.4" id="tDr-Ds-A7V"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="timeLabel" destination="n6Z-rD-9AA" id="cni-Fw-2wJ"/>
+                        <outlet property="trackBar" destination="vTF-4J-WXk" id="oCm-CE-wAV"/>
+                        <outlet property="typeLabel" destination="5W0-Aq-btX" id="B4a-pe-a61"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qf0-DP-xUG" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="228" y="228"/>
+        </scene>
+    </scenes>
+</document>
