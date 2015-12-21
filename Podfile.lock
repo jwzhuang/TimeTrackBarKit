@@ -1,0 +1,10 @@
+PODS:
+  - TimeTrackBarKit (0.1.0)
+
+DEPENDENCIES:
+  - TimeTrackBarKit
+
+SPEC CHECKSUMS:
+  TimeTrackBarKit: cdf1588d48d242bffefc81ccad8760e55ab303f6
+
+COCOAPODS: 0.39.0
