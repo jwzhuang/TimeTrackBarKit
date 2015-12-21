@@ -5,6 +5,6 @@ DEPENDENCIES:
   - TimeTrackBarKit
 
 SPEC CHECKSUMS:
-  TimeTrackBarKit: cdf1588d48d242bffefc81ccad8760e55ab303f6
+  TimeTrackBarKit: 039c9663da2ebc355b70a0f6a567d78123daafdf
 
 COCOAPODS: 0.39.0

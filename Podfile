@@ -3,8 +3,6 @@
 # Uncomment this line if you're using Swift
 use_frameworks!
 
-source 'https://github.com/jwzhuang/MySpecs.git'
-
 target 'TimeTrackBarKit' do
 
 end
