@@ -31,29 +31,29 @@ class ScaleInfo {
     var hour=0
     var minute=0
     var time:String
-    var scaleTimeColor:UIColor = UIColor.grayColor()
+    var scaleTimeColor:UIColor = UIColor.gray
     var scaleTimeLineLength:CGFloat = 10.0;
-    private var minPostX:CGFloat = 0.0
-    private var maxPostX:CGFloat = 0.0
+    fileprivate var minPostX:CGFloat = 0.0
+    fileprivate var maxPostX:CGFloat = 0.0
     
     init(){
         self.time = String(format: "%02d:%02d", hour, minute)
     }
     
-    func isInRange(posX:CGFloat, width:CGFloat) -> Bool{
+    func isInRange(_ posX:CGFloat, width:CGFloat) -> Bool{
         return self.posX >= posX && self.posX <= width;
     }
     
-    func setPosRange(start:CGFloat, end:CGFloat){
+    func setPosRange(_ start:CGFloat, end:CGFloat){
         self.minPostX = start;
         self.maxPostX = end;
     }
     
-    func draw(context:CGContextRef, posY:CGFloat, textSize:CGSize, withAttributes attrs: [String : AnyObject]){
-        time.drawInRect(CGRectMake(CGFloat(posX - textSize.width / 2.0), posY, textSize.width,  textSize.height), withAttributes: attrs)
-        CGContextMoveToPoint(context, CGFloat(posX), posY + textSize.height);
-        CGContextAddLineToPoint(context, CGFloat(posX),posY + textSize.height + scaleTimeLineLength);
-        CGContextSetStrokeColorWithColor(context, scaleTimeColor.CGColor)
-        CGContextStrokePath(context);
+    func draw(_ context:CGContext, posY:CGFloat, textSize:CGSize, withAttributes attrs: [String : AnyObject]){
+        time.draw(in: CGRect(x: CGFloat(posX - textSize.width / 2.0), y: posY, width: textSize.width,  height: textSize.height), withAttributes: attrs)
+        context.move(to: CGPoint(x: CGFloat(posX), y: posY + textSize.height));
+        context.addLine(to: CGPoint(x: CGFloat(posX), y: posY + textSize.height + scaleTimeLineLength));
+        context.setStrokeColor(scaleTimeColor.cgColor)
+        context.strokePath();
     }
 }

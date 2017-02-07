@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E260E3F1E49F1CA00E69140 /* TimeTrackBarKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EF7A2281C279285006BE613 /* TimeTrackBarKit.framework */; };
+		1E260E401E49F1CA00E69140 /* TimeTrackBarKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1EF7A2281C279285006BE613 /* TimeTrackBarKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1E41CBA31C27AA1500E9E48A /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E41CBA01C27AA1500E9E48A /* background.png */; };
 		1E41CBA41C27AA1500E9E48A /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E41CBA11C27AA1500E9E48A /* background@2x.png */; };
 		1E41CBA51C27AA1500E9E48A /* background@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E41CBA21C27AA1500E9E48A /* background@3x.png */; };
@@ -20,10 +22,34 @@
 		1EF7A2491C279316006BE613 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EF7A2471C279316006BE613 /* Main.storyboard */; };
 		1EF7A24B1C279316006BE613 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EF7A24A1C279316006BE613 /* Assets.xcassets */; };
 		1EF7A24E1C279316006BE613 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EF7A24C1C279316006BE613 /* LaunchScreen.storyboard */; };
-		DAEF33E51E83CE8098F9C99D /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB335C72857C59821099E3A7 /* Pods_Example.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1E260E411E49F1CA00E69140 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EF7A21F1C279285006BE613 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1EF7A2271C279285006BE613;
+			remoteInfo = TimeTrackBarKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1E260E431E49F1CA00E69140 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1E260E401E49F1CA00E69140 /* TimeTrackBarKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0E73972BE90EEF70386818D5 /* Pods_TimeTrackBarKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeTrackBarKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E41CBA01C27AA1500E9E48A /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		1E41CBA11C27AA1500E9E48A /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
 		1E41CBA21C27AA1500E9E48A /* background@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@3x.png"; sourceTree = "<group>"; };
@@ -41,9 +67,11 @@
 		1EF7A24A1C279316006BE613 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EF7A24D1C279316006BE613 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1EF7A24F1C279316006BE613 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BB335C72857C59821099E3A7 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C45B5F37291F5BE41581EF05 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
-		C56266ED8CCC08C2A2697389 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
+		250E140F267600413A5F8449 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
+		44F60C3AA31A2DA15263FE65 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
+		659366CEC089D2F5C708E661 /* Pods-TimeTrackBarKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeTrackBarKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TimeTrackBarKit/Pods-TimeTrackBarKit.debug.xcconfig"; sourceTree = "<group>"; };
+		C92182AC11868D19E29E224C /* Pods-TimeTrackBarKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeTrackBarKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimeTrackBarKit/Pods-TimeTrackBarKit.release.xcconfig"; sourceTree = "<group>"; };
+		E248ABA3359E48D344557ACF /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +86,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAEF33E51E83CE8098F9C99D /* Pods_Example.framework in Frameworks */,
+				1E260E3F1E49F1CA00E69140 /* TimeTrackBarKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		079C918979EEFC17959ADC70 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				250E140F267600413A5F8449 /* Pods-Example.debug.xcconfig */,
+				44F60C3AA31A2DA15263FE65 /* Pods-Example.release.xcconfig */,
+				659366CEC089D2F5C708E661 /* Pods-TimeTrackBarKit.debug.xcconfig */,
+				C92182AC11868D19E29E224C /* Pods-TimeTrackBarKit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		1E41CB9F1C27AA1500E9E48A /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,8 +120,8 @@
 				1EF7A22A1C279285006BE613 /* TimeTrackBarKit */,
 				1EF7A2421C279316006BE613 /* Example */,
 				1EF7A2291C279285006BE613 /* Products */,
-				2D069949E10DF3F26AB03839 /* Pods */,
-				AA6DA51CF2F6A2606EC13232 /* Frameworks */,
+				079C918979EEFC17959ADC70 /* Pods */,
+				2767E01DDD895810BF361BCB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,19 +161,11 @@
 			path = Example;
 			sourceTree = "<group>";
 		};
-		2D069949E10DF3F26AB03839 /* Pods */ = {
+		2767E01DDD895810BF361BCB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C45B5F37291F5BE41581EF05 /* Pods-Example.debug.xcconfig */,
-				C56266ED8CCC08C2A2697389 /* Pods-Example.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		AA6DA51CF2F6A2606EC13232 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				BB335C72857C59821099E3A7 /* Pods_Example.framework */,
+				E248ABA3359E48D344557ACF /* Pods_Example.framework */,
+				0E73972BE90EEF70386818D5 /* Pods_TimeTrackBarKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -157,10 +188,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1EF7A2301C279286006BE613 /* Build configuration list for PBXNativeTarget "TimeTrackBarKit" */;
 			buildPhases = (
+				F00BD7090557F94E447F92F4 /* [CP] Check Pods Manifest.lock */,
 				1EF7A2231C279285006BE613 /* Sources */,
 				1EF7A2241C279285006BE613 /* Frameworks */,
 				1EF7A2251C279285006BE613 /* Headers */,
 				1EF7A2261C279285006BE613 /* Resources */,
+				7B5B2973D5873163ED8DEAAF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -175,16 +208,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1EF7A2501C279316006BE613 /* Build configuration list for PBXNativeTarget "Example" */;
 			buildPhases = (
-				3748A91AB9B6BF14C7CC8329 /* Check Pods Manifest.lock */,
+				3CBEBA08AF1B03E5C9602846 /* [CP] Check Pods Manifest.lock */,
 				1EF7A23D1C279316006BE613 /* Sources */,
 				1EF7A23E1C279316006BE613 /* Frameworks */,
 				1EF7A23F1C279316006BE613 /* Resources */,
-				36E5E562B881AB59C483607B /* Embed Pods Frameworks */,
-				B85F742C2557FE0E8E521181 /* Copy Pods Resources */,
+				66D329FAAED34B551898B142 /* [CP] Embed Pods Frameworks */,
+				AEDA6A6B2C4F679C43FC0C38 /* [CP] Copy Pods Resources */,
+				1E260E431E49F1CA00E69140 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1E260E421E49F1CA00E69140 /* PBXTargetDependency */,
 			);
 			name = Example;
 			productName = Example;
@@ -204,10 +239,12 @@
 					1EF7A2271C279285006BE613 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 9396527TM5;
+						LastSwiftMigration = 0820;
 					};
 					1EF7A2401C279316006BE613 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 9396527TM5;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -254,14 +291,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		36E5E562B881AB59C483607B /* Embed Pods Frameworks */ = {
+		3CBEBA08AF1B03E5C9602846 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		66D329FAAED34B551898B142 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,34 +321,49 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3748A91AB9B6BF14C7CC8329 /* Check Pods Manifest.lock */ = {
+		7B5B2973D5873163ED8DEAAF /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TimeTrackBarKit/Pods-TimeTrackBarKit-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B85F742C2557FE0E8E521181 /* Copy Pods Resources */ = {
+		AEDA6A6B2C4F679C43FC0C38 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F00BD7090557F94E447F92F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -323,6 +390,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1E260E421E49F1CA00E69140 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1EF7A2271C279285006BE613 /* TimeTrackBarKit */;
+			targetProxy = 1E260E411E49F1CA00E69140 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1EF7A2471C279316006BE613 /* Main.storyboard */ = {
@@ -435,6 +510,7 @@
 		};
 		1EF7A2311C279286006BE613 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 659366CEC089D2F5C708E661 /* Pods-TimeTrackBarKit.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
@@ -444,16 +520,19 @@
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				INFOPLIST_FILE = TimeTrackBarKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tw.jwzuang.TimeTrackBarKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		1EF7A2321C279286006BE613 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C92182AC11868D19E29E224C /* Pods-TimeTrackBarKit.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
@@ -463,34 +542,42 @@
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				INFOPLIST_FILE = TimeTrackBarKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tw.jwzuang.TimeTrackBarKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		1EF7A2511C279316006BE613 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C45B5F37291F5BE41581EF05 /* Pods-Example.debug.xcconfig */;
+			baseConfigurationReference = 250E140F267600413A5F8449 /* Pods-Example.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Example/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tw.jwzuang.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		1EF7A2521C279316006BE613 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C56266ED8CCC08C2A2697389 /* Pods-Example.release.xcconfig */;
+			baseConfigurationReference = 44F60C3AA31A2DA15263FE65 /* Pods-Example.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Example/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tw.jwzuang.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

@@ -10,24 +10,24 @@ import UIKit
 
 class ObjectInfo {
     var filetype:ObjectType
-    var startDate:NSDate
-    var endDate:NSDate
+    var startDate:Date
+    var endDate:Date
     
-    init(filetype:ObjectType, startDate:NSDate, endDate:NSDate){
+    init(filetype:ObjectType, startDate:Date, endDate:Date){
         self.filetype = filetype
         self.startDate = startDate
         self.endDate = endDate
     }
     
-    func compareTo(fileInfo:ObjectInfo) -> NSComparisonResult{
+    func compareTo(_ fileInfo:ObjectInfo) -> ComparisonResult{
         return self.startDate.compare(fileInfo.startDate)
     }
     
-    func getStartMillis() -> NSTimeInterval{
+    func getStartMillis() -> TimeInterval{
         return self.startDate.timeIntervalSince1970 * 1000;
     }
     
-    func getEndMillis() -> NSTimeInterval{
+    func getEndMillis() -> TimeInterval{
         return self.endDate.timeIntervalSince1970 * 1000;
     }
 }

@@ -15,11 +15,11 @@ class ObjectRect {
     var posY:CGFloat = 10.0
     var width:CGFloat
     var height:CGFloat = 10.0
-    var type:ObjectType = .Normal
-    var startDate:NSDate
-    var endDate:NSDate
+    var type:ObjectType = .normal
+    var startDate:Date
+    var endDate:Date
     
-    init(posX:CGFloat, posY:CGFloat, width:CGFloat, height:CGFloat, type:ObjectType, startDate:NSDate, endDate:NSDate){
+    init(posX:CGFloat, posY:CGFloat, width:CGFloat, height:CGFloat, type:ObjectType, startDate:Date, endDate:Date){
         self.posX = posX
         self.posY = posY
         self.width = width
@@ -30,28 +30,28 @@ class ObjectRect {
     }
     
     //MARK: Public Method
-    func draw(context:CGContextRef, barX:CGFloat = 0, barWidth:CGFloat) ->(){
+    func draw(_ context:CGContext, barX:CGFloat = 0, barWidth:CGFloat) ->(){
         switch type{
-        case .Normal:
-            CGContextSetFillColorWithColor(context, UIColor.blueColor().CGColor)
-        case .Important:
-            CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
-        case .Nothing:
+        case .normal:
+            context.setFillColor(UIColor.blue.cgColor)
+        case .important:
+            context.setFillColor(UIColor.red.cgColor)
+        case .nothing:
             return
         }
         if isInRange(barX, width: barWidth){
             if self.posX < barX && self.posX + self.width > barX{ //cut at left
-                CGContextFillRect(context, CGRectMake(barX, posY, posX + self.width, height))
+                context.fill(CGRect(x: barX, y: posY, width: posX + self.width, height: height))
             }else if self.posX < barWidth && self.posX + self.width > barWidth{ //cut at right
-                CGContextFillRect(context, CGRectMake(posX, posY, barWidth, height))
+                context.fill(CGRect(x: posX, y: posY, width: barWidth, height: height))
             }else{
-                CGContextFillRect(context, CGRectMake(posX, posY, width, height))
+                context.fill(CGRect(x: posX, y: posY, width: width, height: height))
             }
         }
     }
     
     //MARK: Public Method
-    func isInRange(barX:CGFloat, width barWidth:CGFloat) -> Bool{
+    func isInRange(_ barX:CGFloat, width barWidth:CGFloat) -> Bool{
         if (self.posX + self.width < barX) || self.posX > barWidth{
             return false
         }

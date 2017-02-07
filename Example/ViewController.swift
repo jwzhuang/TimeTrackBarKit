@@ -25,7 +25,7 @@ class ViewController: UIViewController,TimeTrackBarDelgate {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setupTimeTrackBar()
     }
@@ -42,38 +42,38 @@ class ViewController: UIViewController,TimeTrackBarDelgate {
     
     
     //MARK: Actions
-    @IBAction func clickNormal(sender: UIButton) {
+    @IBAction func clickNormal(_ sender: UIButton) {
         let currentTime = trackBar.getCurrentTime()
         //        trackBar.reset()
-        trackBar.addObjectRect(type: .Normal, startDate: currentTime.dateByAddingTimeInterval(-1 * 60 * 60), endDate: currentTime.dateByAddingTimeInterval(1 * 60 * 60))
+        trackBar.addObjectRect(.normal, startDate: currentTime.addingTimeInterval(-1 * 60 * 60), endDate: currentTime.addingTimeInterval(1 * 60 * 60))
     }
-    @IBAction func clickImportant(sender: UIButton) {
+    @IBAction func clickImportant(_ sender: UIButton) {
         let currentTime = trackBar.getCurrentTime()
         //        trackBar.reset()
-        trackBar.addObjectRect(type: .Important, startDate: currentTime.dateByAddingTimeInterval(-1 * 60 * 60), endDate: currentTime.dateByAddingTimeInterval(1 * 60 * 60))
+        trackBar.addObjectRect(.important, startDate: currentTime.addingTimeInterval(-1 * 60 * 60), endDate: currentTime.addingTimeInterval(1 * 60 * 60))
     }
     
     //MARK: TimeTrackBarDelgate
-    func onTimePicked(date: NSDate, type: ObjectType) {
+    func onTimePicked(_ date: Date, type: ObjectType) {
         timeLabel.text = dateformatterDate(date)
         
         switch type{
-        case .Normal:
+        case .normal:
             typeLabel.text = "Normal"
-        case .Important:
+        case .important:
             typeLabel.text = "Important"
-        case .Nothing:
+        case .nothing:
             typeLabel.text = "Nothing"
         }
     }
     
     //MARK: Private Method
-    func dateformatterDate(date: NSDate) -> String
+    func dateformatterDate(_ date: Date) -> String
     {
-        let dateFormatter: NSDateFormatter = NSDateFormatter()
+        let dateFormatter: DateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         
-        return dateFormatter.stringFromDate(date)
+        return dateFormatter.string(from: date)
         
         
     }

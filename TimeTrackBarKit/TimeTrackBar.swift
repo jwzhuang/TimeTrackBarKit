@@ -9,46 +9,46 @@
 import UIKit
 
 @objc public enum ObjectType: Int{
-    case Normal, Important, Nothing
+    case normal, important, nothing
 }
 
 @objc public protocol TimeTrackBarDelgate:class{
-    optional func onTimePicked(date:NSDate, type:ObjectType)
+    @objc optional func onTimePicked(_ date:Date, type:ObjectType)
 }
 
 @IBDesignable
-public class TimeTrackBar: UIView {
-    private var currentTime:NSDateComponents?{
+open class TimeTrackBar: UIView {
+    fileprivate var currentTime:DateComponents?{
         didSet{
             updateScalePos()
             updateObjectRectPos()
             setNeedsDisplay()
         }
     }
-    private let cellMilliSeconds = 3600000.0 // 1 hour
-    private var eachPosXMilliSeconds:CGFloat = 0.0
-    private var scaleInfos = [ScaleInfo]() //24 hours
-    private var objectRects = [ObjectRect]()
-    private var middleTimeLinePosX:CGFloat = 0.0
-    private var eachHourWidth:CGFloat = 0.0
-    private var lastTouchPosX:CGFloat = 0.0
-    public var frozen = false
-    public var backGroundImage:UIImage?
-    @IBInspectable public var moveSensitive:CGFloat = 0.2
-    @IBInspectable public var showHours = 4.0
-    @IBInspectable public var scaleTimeColor:UIColor = UIColor.grayColor()
-    @IBInspectable public var scaleTimeFontSize:CGFloat = 12.0
-    @IBInspectable public var scaleTimeLineLength:CGFloat = 10.0;
-    @IBInspectable public var scaleTimePosY:CGFloat = 0.0
-    @IBInspectable public var currentTimeColor:UIColor = UIColor.yellowColor()
-    @IBInspectable public var currentTimeFontSize:CGFloat = 14.0
-    @IBInspectable public var currentTimePosY:CGFloat = 0.0
-    @IBInspectable public var objectRectsPosY:CGFloat = 0.0
-    @IBInspectable public var objectRectsHeight:CGFloat = 0.0
-    @IBInspectable public var middleLineTopSpace:CGFloat = 0.0
-    @IBInspectable public var middleLineBottomSpace:CGFloat = 0.0
+    fileprivate let cellMilliSeconds = 3600000.0 // 1 hour
+    fileprivate var eachPosXMilliSeconds:CGFloat = 0.0
+    fileprivate var scaleInfos = [ScaleInfo]() //24 hours
+    fileprivate var objectRects = [ObjectRect]()
+    fileprivate var middleTimeLinePosX:CGFloat = 0.0
+    fileprivate var eachHourWidth:CGFloat = 0.0
+    fileprivate var lastTouchPosX:CGFloat = 0.0
+    open var frozen = false
+    open var backGroundImage:UIImage?
+    @IBInspectable open var moveSensitive:CGFloat = 0.2
+    @IBInspectable open var showHours = 4.0
+    @IBInspectable open var scaleTimeColor:UIColor = UIColor.gray
+    @IBInspectable open var scaleTimeFontSize:CGFloat = 12.0
+    @IBInspectable open var scaleTimeLineLength:CGFloat = 10.0;
+    @IBInspectable open var scaleTimePosY:CGFloat = 0.0
+    @IBInspectable open var currentTimeColor:UIColor = UIColor.yellow
+    @IBInspectable open var currentTimeFontSize:CGFloat = 14.0
+    @IBInspectable open var currentTimePosY:CGFloat = 0.0
+    @IBInspectable open var objectRectsPosY:CGFloat = 0.0
+    @IBInspectable open var objectRectsHeight:CGFloat = 0.0
+    @IBInspectable open var middleLineTopSpace:CGFloat = 0.0
+    @IBInspectable open var middleLineBottomSpace:CGFloat = 0.0
     
-    @IBOutlet public weak var delegate:TimeTrackBarDelgate?
+    @IBOutlet open weak var delegate:TimeTrackBarDelgate?
     
     override init(frame: CGRect) {
         super.init(frame:frame)
@@ -62,7 +62,7 @@ public class TimeTrackBar: UIView {
         commInit()
     }
     
-    override public func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         
         setupBackGroundImage()
@@ -73,26 +73,26 @@ public class TimeTrackBar: UIView {
         updateScalePos();
     }
     
-    override public func drawRect(rect: CGRect) {
-        super.drawRect(rect)
+    override open func draw(_ rect: CGRect) {
+        super.draw(rect)
         showScaleTime()
         showObjectRect()
         showCurrentTime()
     }
     
     // MARK: Touch Event
-    override public func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesBegan(touches, withEvent: event)
+    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
         let touch = touches.first;
-        lastTouchPosX = (touch?.locationInView(self).x)!;
+        lastTouchPosX = (touch?.location(in: self).x)!;
     }
     
-    override public func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesMoved(touches, withEvent: event)
+    override open func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesMoved(touches, with: event)
         
         let touch = touches.first
         
-        if let currentPosX = touch?.locationInView(self).x{
+        if let currentPosX = touch?.location(in: self).x{
             let posXDefference = currentPosX - lastTouchPosX
             if(abs(posXDefference) < moveSensitive){
                 return
@@ -104,15 +104,15 @@ public class TimeTrackBar: UIView {
         }
     }
     
-    override public func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesEnded(touches, withEvent: event)
+    override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
         
-        var objectType:ObjectType = .Nothing
+        var objectType:ObjectType = .nothing
         
         let now = getCurrentTime()
         
         for objectRect in objectRects{
-            if isGreaterThanDate(now, dateToCompare: objectRect.startDate) && isLessThanDate(now, dateToCompare: objectRect.endDate){
+            if isGreaterThanDate(now, dateToCompare: objectRect.startDate as Date) && isLessThanDate(now, dateToCompare: objectRect.endDate as Date){
                 objectType = objectRect.type
             }
         }
@@ -120,26 +120,26 @@ public class TimeTrackBar: UIView {
     }
     
     // MARK: Public Method
-    func addObjectInfos(objectInfos:[ObjectInfo]){
+    func addObjectInfos(_ objectInfos:[ObjectInfo]){
         for objectInfo in objectInfos{
-            addObjectRect(type: objectInfo.filetype, startDate: objectInfo.startDate, endDate: objectInfo.endDate)
+            addObjectRect(objectInfo.filetype, startDate: objectInfo.startDate as Date, endDate: objectInfo.endDate as Date)
         }
         setNeedsDisplay()
     }
     
     
-    public func addObjectRect(type type:ObjectType, startDate:NSDate, endDate:NSDate){
-        let objectRect = createObjectRect(type: type, startDate: startDate, endDate: endDate)
+    open func addObjectRect(_ type:ObjectType, startDate:Date, endDate:Date){
+        let objectRect = createObjectRect(type, startDate: startDate, endDate: endDate)
         objectRects.append(objectRect)
         setNeedsDisplay()
     }
     
-    func setCurrentTime(date:NSDate){
-        currentTime = NSCalendar.currentCalendar().components([.Year, .Month, .Day, .Hour, .Minute, .Second], fromDate: date)
+    func setCurrentTime(_ date:Date){
+        currentTime = (Calendar.current as NSCalendar).components([.year, .month, .day, .hour, .minute, .second], from: date)
     }
     
-    public func getCurrentTime() -> NSDate{
-        return NSCalendar.currentCalendar().dateFromComponents(currentTime!)!;
+    open func getCurrentTime() -> Date{
+        return Calendar.current.date(from: currentTime!)!;
     }
     
     func reset(){
@@ -148,22 +148,22 @@ public class TimeTrackBar: UIView {
     }
     
     // MARK: Private Method
-    private func commInit(){
+    fileprivate func commInit(){
         currentTime = currentNSDateComponents()
         for _ in 0..<24{
             scaleInfos.append(ScaleInfo())
         }
     }
     
-    private func currentNSDateComponents() -> NSDateComponents{
-        return NSCalendar.currentCalendar().components([.Year, .Month, .Day, .Hour, .Minute, .Second], fromDate: NSDate())
+    fileprivate func currentNSDateComponents() -> DateComponents{
+        return (Calendar.current as NSCalendar).components([.year, .month, .day, .hour, .minute, .second], from: Date())
     }
     
-    private func createObjectRect(type type:ObjectType, startDate:NSDate, endDate:NSDate) -> ObjectRect{
+    fileprivate func createObjectRect(_ type:ObjectType, startDate:Date, endDate:Date) -> ObjectRect{
         
         let startSeconds = startDate.timeIntervalSince1970 * 1.0;
         let endSeconds = endDate.timeIntervalSince1970 * 1.0;
-        let currentSeconds = (NSCalendar.currentCalendar().dateFromComponents(currentTime!)?.timeIntervalSince1970)! * 1.0;
+        let currentSeconds = (Calendar.current.date(from: currentTime!)?.timeIntervalSince1970)! * 1.0;
         
     
         let posX = middleTimeLinePosX + CGFloat(((startSeconds - currentSeconds) / 3600.0 * Double(eachHourWidth)))
@@ -172,18 +172,18 @@ public class TimeTrackBar: UIView {
         return ObjectRect(posX: CGFloat(posX), posY: objectRectsPosY, width: CGFloat(width), height: objectRectsHeight, type: type, startDate: startDate, endDate: endDate)
     }
     
-    private func getDefaultImage() -> UIImage?{
-        let bundle = NSBundle(forClass: TimeTrackBar.self)
-        return UIImage(named: "background", inBundle: bundle, compatibleWithTraitCollection: nil)
+    fileprivate func getDefaultImage() -> UIImage?{
+        let bundle = Bundle(for: TimeTrackBar.self)
+        return UIImage(named: "background", in: bundle, compatibleWith: nil)
 }
     
-    func isGreaterThanDate(currentDate:NSDate, dateToCompare : NSDate) -> Bool
+    func isGreaterThanDate(_ currentDate:Date, dateToCompare : Date) -> Bool
     {
         //Declare Variables
         var isGreater = false
         
         //Compare Values
-        if currentDate.compare(dateToCompare) == NSComparisonResult.OrderedDescending
+        if currentDate.compare(dateToCompare) == ComparisonResult.orderedDescending
         {
             isGreater = true
         }
@@ -193,13 +193,13 @@ public class TimeTrackBar: UIView {
     }
     
     
-    func isLessThanDate(currentDate:NSDate, dateToCompare : NSDate) -> Bool
+    func isLessThanDate(_ currentDate:Date, dateToCompare : Date) -> Bool
     {
         //Declare Variables
         var isLess = false
         
         //Compare Values
-        if currentDate.compare(dateToCompare) == NSComparisonResult.OrderedAscending
+        if currentDate.compare(dateToCompare) == ComparisonResult.orderedAscending
         {
             isLess = true
         }
@@ -208,82 +208,82 @@ public class TimeTrackBar: UIView {
         return isLess
     }
     
-    private func setupBackGroundImage(){
+    fileprivate func setupBackGroundImage(){
         #if !(TARGET_INTERFACE_BUILDER)
             UIGraphicsBeginImageContext(self.frame.size);
-            backGroundImage!.drawInRect(self.bounds);
+            backGroundImage!.draw(in: self.bounds);
             let newImage = UIGraphicsGetImageFromCurrentImageContext();
             UIGraphicsEndImageContext();
-            self.backgroundColor = UIColor(patternImage: newImage)
+            self.backgroundColor = UIColor(patternImage: newImage!)
         #else
             self.backgroundColor = UIColor.darkGrayColor()
         #endif
         
     }
     
-    private func setupVectorScale(){
+    fileprivate func setupVectorScale(){
         for scaleInfo in scaleInfos{
             scaleInfo.posX = -1
             scaleInfo.scaleTimeColor = scaleTimeColor
             scaleInfo.scaleTimeLineLength = scaleTimeLineLength
-            scaleInfo.second = 3600 * scaleInfos.indexOf({$0 === scaleInfo})!
+            scaleInfo.second = 3600 * scaleInfos.index(where: {$0 === scaleInfo})!
             scaleInfo.setPosRange(0.0, end: 24.0 * eachHourWidth)
         }
     }
     
-    private func showCurrentTime(){
+    fileprivate func showCurrentTime(){
         let context = UIGraphicsGetCurrentContext()
-        CGContextSetStrokeColorWithColor(context, currentTimeColor.CGColor)
-        CGContextMoveToPoint(context, CGFloat(middleTimeLinePosX), middleLineTopSpace)
-        CGContextAddLineToPoint(context, CGFloat(middleTimeLinePosX),self.bounds.size.height - middleLineBottomSpace)
-        CGContextStrokePath(context)
+        context?.setStrokeColor(currentTimeColor.cgColor)
+        context?.move(to: CGPoint(x: CGFloat(middleTimeLinePosX), y: middleLineTopSpace))
+        context?.addLine(to: CGPoint(x: CGFloat(middleTimeLinePosX), y: self.bounds.size.height - middleLineBottomSpace))
+        context?.strokePath()
         
-        let font = UIFont.systemFontOfSize(currentTimeFontSize)
+        let font = UIFont.systemFont(ofSize: currentTimeFontSize)
         let paragraphSytle = NSMutableParagraphStyle()
-        paragraphSytle.alignment = NSTextAlignment.Center
+        paragraphSytle.alignment = NSTextAlignment.center
         
         let attribute = [NSParagraphStyleAttributeName:paragraphSytle, NSFontAttributeName:font, NSForegroundColorAttributeName:currentTimeColor]
         
         let currentTimeString = String(format: "%04d-%02d-%02d %02d:%02d:%02d", (currentTime?.year)!, (currentTime?.month)!, (currentTime?.day)!, (currentTime?.hour)!, (currentTime?.minute)!, (currentTime?.second)!)
         
-        let textSize: CGSize = currentTimeString.sizeWithAttributes(attribute)
+        let textSize: CGSize = currentTimeString.size(attributes: attribute)
         
-        currentTimeString.drawInRect(CGRectMake(middleTimeLinePosX - textSize.width / 2.0, currentTimePosY, textSize.width,  textSize.height), withAttributes: attribute)
-        CGContextSaveGState(context)
+        currentTimeString.draw(in: CGRect(x: middleTimeLinePosX - textSize.width / 2.0, y: currentTimePosY, width: textSize.width,  height: textSize.height), withAttributes: attribute)
+        context?.saveGState()
     }
     
-    private func showScaleTime(){
+    fileprivate func showScaleTime(){
         let context = UIGraphicsGetCurrentContext()
-        let font = UIFont.systemFontOfSize(scaleTimeFontSize)
+        let font = UIFont.systemFont(ofSize: scaleTimeFontSize)
         
         let paragraphSytle = NSMutableParagraphStyle()
-        paragraphSytle.alignment = NSTextAlignment.Center
+        paragraphSytle.alignment = NSTextAlignment.center
         
         let attribute = [NSParagraphStyleAttributeName:paragraphSytle, NSFontAttributeName:font, NSForegroundColorAttributeName:scaleTimeColor]
-        let textSize: CGSize = "00:00".sizeWithAttributes(attribute)
+        let textSize: CGSize = "00:00".size(attributes: attribute)
         
         for scaleinfo in scaleInfos{
             if (scaleinfo.isInRange(0.0, width: self.bounds.size.width)){
                 scaleinfo.draw(context!, posY: scaleTimePosY, textSize: textSize, withAttributes: attribute)  
             }
         }
-        CGContextSaveGState(context)
+        context?.saveGState()
     }
     
-    private func showObjectRect(){
+    fileprivate func showObjectRect(){
         let context = UIGraphicsGetCurrentContext()
         for objectRect in objectRects{
             objectRect.draw(context!, barWidth: self.bounds.size.width)
         }
-        CGContextSaveGState(context)
+        context?.saveGState()
     }
     
-    private func updateObjectRectPos(){
+    fileprivate func updateObjectRectPos(){
         
         for objectRect in objectRects{
             let startSeconds = objectRect.startDate.timeIntervalSince1970 * 1.0
             let endSeconds = objectRect.endDate.timeIntervalSince1970 * 1.0
-            let currentSeconds = (NSCalendar.currentCalendar().dateFromComponents(currentTime!)?.timeIntervalSince1970)! * 1.0;
+            let currentSeconds = (Calendar.current.date(from: currentTime!)?.timeIntervalSince1970)! * 1.0;
             let newPosX = middleTimeLinePosX + (CGFloat(startSeconds - currentSeconds) / 3600.0 * eachHourWidth)
             let newWidth = CGFloat(endSeconds - startSeconds) / 3600.0 * eachHourWidth
             objectRect.posX = CGFloat(newPosX)
@@ -291,12 +291,12 @@ public class TimeTrackBar: UIView {
         }
     }
     
-    private func updateScalePos(){
+    fileprivate func updateScalePos(){
         for scaleInfo in scaleInfos{
             if let now = currentTime{
-                var secDifference = 3600 * (scaleInfo.hour - now.hour)
-                secDifference += 60 * (scaleInfo.minute - now.minute)
-                secDifference += scaleInfo.second - now.second
+                var secDifference = 3600 * (scaleInfo.hour - now.hour!)
+                secDifference += 60 * (scaleInfo.minute - now.minute!)
+                secDifference += scaleInfo.second - now.second!
                 
                 scaleInfo.setPosRange(0.0, end: 24.0 * eachHourWidth)
                 scaleInfo.posX = middleTimeLinePosX + (CGFloat(secDifference) / 3600.0 * eachHourWidth)
@@ -304,9 +304,9 @@ public class TimeTrackBar: UIView {
         }
     }
     
-    private func updateCurrentTimeByPosX(posXDefference:CGFloat){
+    fileprivate func updateCurrentTimeByPosX(_ posXDefference:CGFloat){
         let moveSeconds = posXDefference * eachPosXMilliSeconds
-        let timeStamp = (NSCalendar.currentCalendar().dateFromComponents(currentTime!)?.timeIntervalSince1970)! * 1000 - Double(moveSeconds);
-        currentTime = NSCalendar.currentCalendar().components([.Year, .Month, .Day, .Hour, .Minute, .Second], fromDate: NSDate(timeIntervalSince1970: timeStamp / 1000))
+        let timeStamp = (Calendar.current.date(from: currentTime!)?.timeIntervalSince1970)! * 1000 - Double(moveSeconds);
+        currentTime = (Calendar.current as NSCalendar).components([.year, .month, .day, .hour, .minute, .second], from: Date(timeIntervalSince1970: timeStamp / 1000))
     }
 }
